@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Voice Agent - Article</title>
+    <!-- Include Marked.js library for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .article-container h2 {
+            font-size: 24px;
+            margin: 30px 0 15px 0;
+            color: #000;
+        }
+
+        .article-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .article-container ul, .article-container ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-container li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #d32f2f;
+            background-color: #ffebee;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .article-container {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .article-container h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Afan</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <div id="content">
+                <div class="loading">Loading content...</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to load and display Markdown content
+        async function loadArticleContent() {
+            const contentElement = document.getElementById('content');
+            
+            try {
+                // Fetch the Markdown file
+                const response = await fetch('nano_agent_article.md');
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load article: ${response.status} ${response.statusText}`);
+                }
+                
+                // Get the Markdown content
+                const markdown = await response.text();
+                
+                // Convert Markdown to HTML using marked.js
+                const htmlContent = marked.parse(markdown);
+                
+                // Insert the HTML content into the page
+                contentElement.innerHTML = htmlContent;
+                
+            } catch (error) {
+                console.error('Error loading article:', error);
+                contentElement.innerHTML = `
+                    <div class="error">
+                        <h2>Error Loading Content</h2>
+                        <p>Unable to load the article content. Please try again later.</p>
+                        <p><small>Error: ${error.message}</small></p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Load the article content when the page loads
+        document.addEventListener('DOMContentLoaded', loadArticleContent);
+    </script>
+</body>
+</html>
