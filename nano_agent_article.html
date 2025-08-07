@@ -162,35 +162,105 @@
 
     <script>
         // Embedded Markdown content
-        const markdownContent = `# Meet Nano Voice Agent v1
+        const markdownContent = `# Nano Voice Agent
 
-The future of human-computer interaction is here with Nano Voice Agent v1. Our most advanced voice AI agent combines cutting-edge natural language processing with intuitive voice recognition to create seamless conversational experiences.
+Nano Voice Agent is an intelligent voice chat agent that enables natural conversation with AI using voice input and output. It integrates speech recognition, natural language processing, text-to-speech synthesis, and various tools to create a comprehensive voice interaction experience.
 
-## Revolutionary Voice Technology
+## Features
 
-Nano Voice Agent v1 represents a significant leap forward in voice AI technology. Unlike traditional voice assistants, our agent understands context, maintains conversation flow, and adapts to your communication style over time.
+- **Voice Interaction**: Full voice-based conversation with automatic speech recognition (ASR) and text-to-speech (TTS)
+- **Multi-Turn Conversation**: Multi-turn conversation with working momery
+- **Natural Language Understanding**: Powered by large language models for contextual understanding
+- **Visual Capabilities**: Integration with camera for image capture and vision-language model analysis
+- **Web Search**: Real-time information retrieval from Baidu and Google
+- **Session Management**: Intelligent session handling with timeout and context management
+- **Content Safety**: Text guardrails for content filtering and safety
+- **Speaker Verification**: Optional speaker verification for personalized experience
+- **Real-time Audio Processing**: Voice activity detection (VAD) and audio streaming
 
-Built on our proprietary neural network architecture, the agent can handle complex multi-turn conversations while maintaining high accuracy and response quality. Whether you're scheduling appointments, researching information, or controlling smart home devices, Nano Voice Agent provides an unparalleled user experience.
+## Architecture
 
-## Key Features
+The system consists of several key components:
 
-1. **Contextual Understanding**: Remembers conversation history and references to provide coherent responses.
-2. **Multi-language Support**: Communicates fluently in over 20 languages with native-like pronunciation.
-3. **Emotional Intelligence**: Detects tone and adjusts responses accordingly for more natural interactions.
-4. **Real-time Integration**: Seamlessly connects with popular applications and services.
-5. **Privacy First**: All processing respects user privacy with end-to-end encryption options.
+1. **VoiceChatAgent**: Main orchestrator managing the complete voice interaction workflow
+2. **Audio Processing**: AudioRecorder and AudioPlayer for handling input/output audio
+3. **Speech Components**: ASR, VAD, TTS, and SpeakerVerification for speech processing
+4. **AI Models**: LLM (Large Language Model) and VLM (Vision-Language Model) for intelligence
+5. **Tools**: Web search engine integration for up-to-date information
+6. **Memory Management**: WorkMemory and SessionManager for context handling
+7. **Safety**: TextGuardrail for content filtering
 
-## Applications
+## Requirements
 
-Nano Voice Agent v1 is transforming industries from customer service to healthcare. Our enterprise clients report 70% reduction in response times and 95% customer satisfaction rates when using our voice agent technology.
+- Python 3.10+
+- Audio libraries: PyAudio, webrtcvad, pygame, edge-tts
+- Speech recognition: funasr, modelscope
+- Computer vision: opencv-python
+- Web libraries: requests, beautifulsoup4
+- AI libraries: openai, dashscope
+- Search tools: baidusearch, googlesearch-python
 
-In healthcare, the agent assists medical professionals with documentation and patient interaction. In retail, it provides personalized shopping assistance. In smart homes, it orchestrates complex automation scenarios through simple voice commands.
+## Installation from git repo
 
-## Future Development
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/afan-gf/nano_voice_agent.git
+cd nano_voice_agent
+\`\`\`
 
-We're continuously improving Nano Voice Agent with regular updates and new capabilities. Our roadmap includes enhanced emotional intelligence, better integration with IoT devices, and expanded domain-specific expertise for specialized industries.
+2. Install dependencies:
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
 
-Try Nano Voice Agent v1 today and experience the future of voice interaction.`;
+3. Configure the system by creating a [config.py] file with necessary API keys and settings.
+export your API-KEY
+\`\`\`bash
+export DASHSCOPE_API_KEY=your_dashscope_api_key
+\`\`\`
+
+## Usage
+
+Run the voice agent:
+\`\`\`bash
+python nano_agent.py
+\`\`\`
+The agent will start listening for voice input. Speak naturally and wait for the AI response.
+
+## Configuration
+
+Key configuration parameters include:
+
+- API keys for LLM, VLM, and other services
+- Audio settings (sample rate, chunk size, etc.)
+- Model parameters (model names, system prompts)
+- Session management (timeout, end phrases)
+- Safety settings (language filters, character patterns)
+- Camera settings (device index, warmup parameters)
+- Search settings (timeout, result count)
+
+## Tools
+
+The agent supports two main tools:
+
+1. **Vision Analysis**: Capture images and analyze them with a vision-language model
+2. **Web Search**: Search the web for up-to-date information using Baidu or Google
+
+## Safety Features
+
+- Text guardrails to filter unsafe content
+- Language detection and filtering
+- Special character removal
+- Emoji and symbol filtering
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+`;
 
         // Function to load and display Markdown content
         async function loadArticleContent() {
