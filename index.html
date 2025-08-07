@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nona AI Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .try-button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .hero {
+            display: flex;
+            padding: 50px 40px;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 span {
+            text-decoration: underline;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .talk-button, .learn-button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .talk-button {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .learn-button {
+            background-color: transparent;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Afan</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="try-button">Try Nona Agent</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcom to Afan's site.<br>I'am building <span>useful</span> and <span>secure</span> AI</h1>
+                <div class="cards">
+                    <div class="card" onclick="window.location.href='nano_agent_article.html'">
+                        <h3>Nano Voice Agent</h3>
+                        <h2>Meet Nano Voice Agent v1</h2>
+                        <p>Nano Voice Agen v1, our most intelligent voice AI agent, is now available.</p>
+                        <button class="talk-button" onclick="window.location.href='nano_agent_article.html'; event.stopPropagation();">Read more</button>
+                    </div>
+                    <div class="card">
+                        <h3>API</h3>
+                        <h2>Build with Nano AI agent</h2>
+                        <p>Create AI-powered voice agent and custom experiences using Nano Agent API.</p>
+                        <button class="learn-button">Coming soon...</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <svg width="500" height="400" viewBox="0 0 500 400">
+                    <rect x="50" y="50" width="400" height="300" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+                    <circle cx="150" cy="150" r="30" fill="#007acc"/>
+                    <circle cx="350" cy="150" r="30" fill="#007acc"/>
+                    <circle cx="250" cy="250" r="30" fill="#007acc"/>
+                    <line x1="150" y1="150" x2="350" y2="150" stroke="#999" stroke-width="2"/>
+                    <line x1="350" y1="150" x2="250" y2="250" stroke="#999" stroke-width="2"/>
+                    <line x1="250" y1="250" x2="150" y2="150" stroke="#999" stroke-width="2"/>
+                </svg>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
