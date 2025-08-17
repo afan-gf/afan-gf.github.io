@@ -1,6 +1,6 @@
-This page contains a collection of research papers and frameworks on Large Language Model (LLM) agents.
+This page contains a collection of *research papers* and *frameworks* on *Large Language Model (LLM) agents*.
 LLM agent is a very challenging and meaningful research field. I‘m looking to build intelligent LLM agents to collaborate with us in work and life. 
-This collection of research on LLM agents covers topics ranging from agent architecture and surveys to agent self-evolution and thinking, tool usage, grounding, multi-agent collaboration, agent memory mechanisms, benchmarking, and security. It also includes representative frameworks and applications. I hope this collection will help you develop a comprehensive perspective on LLM research and practice.
+This collection of research on LLM agents covers topics ranging from *agent architecture* and *surveys* to agent *self-evolution* and *thinking*, *tool usage*, grounding, *multi-agent collaboration*, agent *memory* mechanisms, *benchmarking*, and *security*. It also includes representative *frameworks and applications*. I hope this collection will help you develop a comprehensive perspective on LLM research and practice.
 
 
 # Table of Contents
@@ -20,12 +20,12 @@ This collection of research on LLM agents covers topics ranging from agent archi
    - [MetaGPT](#metagpt)
    - [AFlow](#aflow)
    - [AWorld](#aworld)
-   - [🦉 OWL](#-owl)
+   - [OWL](#-owl)
    - [Alita](#alita)
    - [Litellm](#litellm)
    - [CrewAI](#crewai)
    - [LangGraph](#langgraph)
-9. [Practices & Engineering](#practices--engineering)
+9. [Engineering](#engineering)
 
 # Agent Architecture & Survey
 
@@ -233,6 +233,6 @@ This collection of research on LLM agents covers topics ranging from agent archi
 - https://langchain-ai.github.io/langgraph/
 - https://github.com/langchain-ai/langgraph
 
-# Practices & Engineering
+# Engineering
 
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), Anthropic, 2025
