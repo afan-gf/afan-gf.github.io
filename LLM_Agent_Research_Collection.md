@@ -1,5 +1,3 @@
-# Agent Architecture & Survey
-
 # Table of Contents
 
 1. [Agent Architecture & Survey](#agent-architecture--survey)
@@ -23,6 +21,8 @@
    - [CrewAI](#crewai)
    - [LangGraph](#langgraph)
 9. [Practices & Engineering](#practices--engineering)
+
+# Agent Architecture & Survey
 
 - [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427), Theodore R. Sumers∗ Shunyu Yao, 2024
 - [Large Language Model Agent: A Survey on Methodology, Applications and Challenges](https://arxiv.org/abs/2503.21460), Junyu Luo at el., 2025
