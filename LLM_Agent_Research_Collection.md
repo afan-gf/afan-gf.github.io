@@ -1,4 +1,6 @@
-LLM agents are a very interesting field. People are looking to build intelligent LLM agents to collaborate with humans in work and life. This collection of research on LLM agents covers topics ranging from agent architecture and surveys to agent self-evolution and thinking, tool usage, grounding, multi-agent collaboration, agent memory mechanisms, benchmarking, and security. It also includes representative frameworks and applications. I hope this collection will help you develop a comprehensive perspective on LLM research and practice.
+This page contains a collection of research papers and frameworks on Large Language Model (LLM) agents.
+LLM agent is a very challenging and meaningful research field. I‘m looking to build intelligent LLM agents to collaborate with us in work and life. 
+This collection of research on LLM agents covers topics ranging from agent architecture and surveys to agent self-evolution and thinking, tool usage, grounding, multi-agent collaboration, agent memory mechanisms, benchmarking, and security. It also includes representative frameworks and applications. I hope this collection will help you develop a comprehensive perspective on LLM research and practice.
 
 
 # Table of Contents
