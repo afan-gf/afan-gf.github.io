@@ -35,6 +35,12 @@ Based on data-centric ideas, adding tool usage training data to LLM's training d
 ### Method 3: RL
 Since DeepSeek-R1's work, test-time compute scaling has become a hot research direction. Many works reference DeepSeek-R1's approach, using similar rule-based RL methods for specific tool usage capabilities or general open environment tool usage, achieving good results.
 
+The Prompt method attempts to unlock the LLM's tool usage capabilities through structured prompts, but is limited by the model's inherent capabilities and static parameters. Essentially, it does not improve the model's tool usage capabilities and instead sacrifices some generality due to the introduction of structured prompts.
+
+The SFT method relies on the quantity and quality of training data. Tool usage data is inherently sparse compared to other training data, making it difficult to substantially improve the model's tool usage capabilities at the core level.
+
+In contrast, the RL method guides the model through tool usage reasoning, then uses tools to interact with the environment to instruct the model in learning tool usage capabilities. This method has been verified to simply and effectively greatly enhance the model's ability to handle complex tool usage and open-ended tasks.
+
 ## 3. Comparison of Three Methods
 
 | Method | Advantages | Limitations | Representative Works |
