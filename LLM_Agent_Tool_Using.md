@@ -1,4 +1,4 @@
-# LLM Agent Tools Using, From Prompt,SFT to Agentic RL
+# LLM Agent Tools Using, From Prompt and SFT to Agentic RL
 
 Tool using is a crucial capability for LLM Agents, enabling them to truly interact with the environment and expand the boundaries of agent capabilities. How to enable LLM Agents to better use tools has always been a popular and valuable research direction. This post discuss the current LLM Agent tools using from a survey perspective.
 
