@@ -1,33 +1,33 @@
 # LLM Agent Tools Using, From Prompt,SFT to Agentic RL
 
-Let's discuss the current LLM Agent tools usage from several topics.
+Tool using is a crucial capability for LLM Agents, enabling them to truly interact with the environment and expand the boundaries of agent capabilities. How to enable LLM Agents to better use tools has always been a popular and valuable research direction. This post discuss the current LLM Agent tools using from a survey perspective.
 
 ## 1. How LLM Agent Uses Tools and Key Challenges
 
 The basic pattern of LLM Agent using tools can be summarized as follows:
 
-1) Inform the LLM about the problem/task to solve and the available tool set information (tool name, usage description, parameter introduction, etc.) through prompts.
+1) Inform the LLM about the problem/task to solve and the available tool set information (tool name, using description, parameter introduction, etc.) through prompts.
 
 2) The LLM reasons and outputs solution steps. If a tool is needed, it outputs the tool name and parameters.
 
 3) The Agent executes the corresponding tool in the tool space, generates results, and if needed, feeds the results back to the next round of prompts.
 <img width="604" height="209" alt="Foed back" src="https://github.com/user-attachments/assets/685859f6-282e-4369-b47e-efe372cd3efd" />
 
-The LLM is the most critical element in the tool usage process, determining the upper limit of the Agent's tool usage capabilities. The LLM needs to:
+The LLM is the most critical element in the tool using process, determining the upper limit of the Agent's tool using capabilities. The LLM needs to:
 
 1) Decide which tool to use for planning
 
 2) Determine when to use it
 
-3) Know how to use it - provide function call parameters and tool usage context
+3) Know how to use it - provide function call parameters and tool using context
 
 4) Dynamically adjust based on tool execution feedback to handle open scenarios
 
-5) Find optimal tool usage solutions for multi-step complex tasks
+5) Find optimal tool using solutions for multi-step complex tasks
 
-These challenges can be summarized as: how to improve LLM's tool usage capabilities?
+These challenges can be summarized as: how to improve LLM's tool using capabilities?
 
-## 2. Methods to Improve LLM Tool Usage Capabilities Over Time
+## 2. Methods to Improve LLM Tool Using Capabilities Over Time
 
 Three phases of methods can be identified chronologically:
 - Early approaches used Prompt engineering
@@ -35,29 +35,29 @@ Three phases of methods can be identified chronologically:
 - Since DeepSeek-R1's work is released, RL (Reinforcement Learning) has become a hot research direction
 
 ### Method 1: Prompt
-Using in-context learning to provide prompt examples of tool usage, or carefully designing specific reasoning and tool usage prompt schemes. Representative work: ReAct.
+Using in-context learning to provide prompt examples of tool using, or carefully designing specific reasoning and tool using prompt schemes. Representative work: ReAct.
 
 ### Method 2: SFT
-Based on data-centric ideas, adding tool usage training data to LLM's training dataset and improving tool usage capabilities through SFT. Representative works: ToRA, Toolace.
+Based on data-centric ideas, adding tool using training data to LLM's training dataset and improving tool using capabilities through SFT. Representative works: ToRA, Toolace.
 
 ### Method 3: RL
-Since DeepSeek-R1's work, test-time compute scaling has become a hot research direction. Many works reference DeepSeek-R1's approach, using similar rule-based RL methods for specific tool usage capabilities or general open environment tool usage, achieving good results.
+Since DeepSeek-R1's work, test-time compute scaling has become a hot research direction. Many works reference DeepSeek-R1's approach, using similar rule-based RL methods for specific tool using capabilities or general open environment tool using, achieving good results.
 
-The Prompt method attempts to unlock the LLM's tool usage capabilities through structured prompts, but is limited by the model's inherent capabilities and static parameters. Essentially, it does not improve the model's tool usage capabilities and instead sacrifices some generality due to the introduction of structured prompts.
+The Prompt method attempts to unlock the LLM's tool using capabilities through structured prompts, but is limited by the model's inherent capabilities and static parameters. Essentially, it does not improve the model's tool using capabilities and instead sacrifices some generality due to the introduction of structured prompts.
 
-The SFT method relies on the quantity and quality of training data. Tool usage data is inherently sparse compared to other training data, making it difficult to substantially improve the model's tool usage capabilities at the core level.
+The SFT method relies on the quantity and quality of training data. Tool using data is inherently sparse compared to other training data, making it difficult to substantially improve the model's tool using capabilities at the core level.
 
-In contrast, the RL method guides the model through tool usage reasoning, then uses tools to interact with the environment to instruct the model in learning tool usage capabilities. This method has been verified to simply and effectively greatly enhance the model's ability to handle complex tool usage and open-ended tasks.
+In contrast, the RL method guides the model through **tool using reasoning**, then uses tools to interact with the environment to instruct the model in learning tool using capabilities. This method has been verified to simply and effectively greatly enhance the model's ability to handle complex tool using and open-ended tasks.
 
 ## 3. Comparison of Three Methods
 
 | Method | Advantages | Limitations | Representative Works |
 |--------|------------|-------------|---------------------|
-| Prompt | 1) In-context learning provides tool usage examples<br>2) Carefully designed reasoning and tool usage prompt schemes | Simple and generic implementation without changing LLM parameters | ReAct, Ecoact |
-| SFT | Data-centric approach, improves tool usage through training data | Depends on data quantity and quality, tool usage data is sparse | ToRA, Toolace, xlam |
-| RL | Rule-based RL methods guide LLM to autonomously improve tool usage capabilities through training | Makes complex task and open environment tool usage possible, but training efficiency is a bottleneck | ARTIST, ToRL, OTC, ZeroTIR, Kimi-Researcher, Nemotron-Tool-N1 |
+| Prompt | 1) In-context learning provides tool using examples<br>2) Carefully designed reasoning and tool using prompt schemes | Simple and generic implementation without changing LLM parameters | ReAct, Ecoact |
+| SFT | Data-centric approach, improves tool using through training data | Depends on data quantity and quality, tool using data is sparse | ToRA, Toolace, xlam |
+| RL | Rule-based RL methods guide LLM to autonomously improve tool using capabilities through training | Makes complex task and open environment tool using possible, but training efficiency is a bottleneck | ARTIST, ToRL, OTC, ZeroTIR, Kimi-Researcher, Nemotron-Tool-N1 |
 
-## Agentic RL Training for Tool Usage
+## Agentic RL Training for Tool Using
 
 The RL approach can be simply summarized as shown in the diagram.
 <img width="689" height="219" alt="Reward" src="https://github.com/user-attachments/assets/30e0f445-c8c3-40d1-8119-cfa478f1b151" />
@@ -79,7 +79,7 @@ Performance shows significant improvement.
 ## Open Questions
 
 1) How to let LLM Agent evolve from using tools to creating tools
-2) How to train more effective and general tool-using LLMs while pushing LLM's vertical domain tool usage capabilities to the limit (e.g., web search)
+2) How to train more effective and general tool-using LLMs while pushing LLM's vertical domain tool using capabilities to the limit (e.g., web search)
 3) Evaluation systems and methods aligned with real-world application scenarios
 
 ## References
