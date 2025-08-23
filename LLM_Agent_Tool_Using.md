@@ -5,16 +5,24 @@ Let's discuss the current LLM Agent tools usage from several topics.
 ## 1. How LLM Agent Uses Tools and Key Challenges
 
 The basic pattern of LLM Agent using tools can be summarized as follows:
+
 1) Inform the LLM about the problem/task to solve and the available tool set information (tool name, usage description, parameter introduction, etc.) through prompts.
+
 2) The LLM reasons and outputs solution steps. If a tool is needed, it outputs the tool name and parameters.
+
 3) The Agent executes the corresponding tool in the tool space, generates results, and if needed, feeds the results back to the next round of prompts.
 <img width="604" height="209" alt="Foed back" src="https://github.com/user-attachments/assets/685859f6-282e-4369-b47e-efe372cd3efd" />
 
 The LLM is the most critical element in the tool usage process, determining the upper limit of the Agent's tool usage capabilities. The LLM needs to:
+
 1) Decide which tool to use for planning
+
 2) Determine when to use it
+
 3) Know how to use it - provide function call parameters and tool usage context
+
 4) Dynamically adjust based on tool execution feedback to handle open scenarios
+
 5) Find optimal tool usage solutions for multi-step complex tasks
 
 These challenges can be summarized as: how to improve LLM's tool usage capabilities?
