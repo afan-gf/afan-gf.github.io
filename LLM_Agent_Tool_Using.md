@@ -79,9 +79,11 @@ Performance shows significant improvement.
 
 ## Open Questions
 
-1) How to let LLM Agent evolve from using tools to creating tools
-2) How to train more effective and general tool-using LLMs while pushing LLM's vertical domain tool using capabilities to the limit (e.g., web search)
-3) Evaluation systems and methods aligned with real-world application scenarios
+1) How to let LLM Agent evolve from using tools to creating tools.
+
+2) How to train more effective and general tool-using LLMs while pushing LLM's vertical domain tool using capabilities to the limit.
+
+3) Evaluation systems and methods aligned with real-world application scenarios.
 
 ## References
 
