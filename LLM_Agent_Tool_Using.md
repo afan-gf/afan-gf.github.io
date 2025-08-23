@@ -24,7 +24,7 @@ These challenges can be summarized as: how to improve LLM's tool usage capabilit
 Three phases of methods can be identified chronologically:
 - Early approaches used Prompt engineering
 - Later, data-centric approaches used SFT or DPO methods
-- Since DeepSeek-R1's work, RL (Reinforcement Learning) has become a hot research direction
+- Since DeepSeek-R1's work is released, RL (Reinforcement Learning) has become a hot research direction
 
 ### Method 1: Prompt
 Using in-context learning to provide prompt examples of tool usage, or carefully designing specific reasoning and tool usage prompt schemes. Representative work: ReAct.
